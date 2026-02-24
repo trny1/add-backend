@@ -7,7 +7,11 @@ import { initializeFirestore, collection, getDocs, query, orderBy, doc, setDoc, 
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://cozy-moonbeam-137a68.netlify.app', // <--- Ide írd be a pontos Netlify URL-edet!
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 const firebaseConfig = {
