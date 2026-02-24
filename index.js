@@ -188,7 +188,7 @@ app.delete('/api/news/:id', async (req, res) => {
   }
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Backend is running on http://localhost:${PORT}`);
+const Port = process.env.PORT || 3000;
+app.listen(Port, () => {
+  console.log(`Backend is running on http://localhost:${Port}`);
 });
