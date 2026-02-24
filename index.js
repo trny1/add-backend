@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://cozy-moonbeam-137a68.netlify.app', // <--- Ide írd be a pontos Netlify URL-edet!
+  origin: 'https://insight-beta.netlify.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
